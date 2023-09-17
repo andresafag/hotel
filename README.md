@@ -21,20 +21,29 @@ This tool will allow you to keep a complete and detailed control of your reserva
 <picture>
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/be9cf797-dd7e-4bfe-92c2-f04ca6214271"> 
 </picture>
+</br>
+</br>
 
 > This is the relationship between the table reservation and host
 <picture>
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/cd8b97d0-bb1f-4192-804e-4083a6eed721"> 
 </picture>
-
+</br>
+</br>
 <picture>
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/bf63a41f-b3fb-4840-b5d5-8b2b46966960"> 
 </picture>
+</br>
+</br>
+
+> ## Below is the username and the password kept in the employees table aforementioned
+:arrow_double_down::arrow_double_down::arrow_double_down::arrow_double_down:
 
 <picture>
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/ef4e2c07-010a-4204-b68e-7187ff7dd70e"> 
 </picture>
-
+</br>
+</br>
 
 <picture>
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/709c1234-33f8-4843-bd2f-f024882c0b87"> 
@@ -65,6 +74,8 @@ This tool will allow you to keep a complete and detailed control of your reserva
 
 </br>
 </br>
+
+> ## :heavy_check_mark: When the reservation is saved successfully :heavy_check_mark:
 
 <picture>
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/3f8519fe-680e-4234-b9ed-56f803437f02"> 
@@ -114,6 +125,6 @@ This tool will allow you to keep a complete and detailed control of your reserva
 </br>
 
 
-💙 <strong>Andrés Acosta</strong></br>
+##  :man: <strong>Andrés Acosta García</strong> :construction_worker: </br>
 <a href="https://www.linkedin.com/in/andrés-acosta-203923238" target="_blank">
 <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
