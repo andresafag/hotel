@@ -112,7 +112,7 @@ This tool will allow you to keep a complete and detailed control of your reserva
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/5079b6e3-eda1-49ce-8a3a-884b206b0b4d"> 
 </picture>
 
-## 🖥️ Tecnologies used:
+## 🖥️ Technologies used:
 
 - Java :coffee:
 - Eclipse :first_quarter_moon:
