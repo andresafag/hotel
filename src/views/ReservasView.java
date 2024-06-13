@@ -22,9 +22,11 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.Toolkit;
 import java.beans.PropertyChangeListener;
@@ -112,25 +114,25 @@ public class ReservasView extends JFrame {
 		separator_1_1.setBackground(SystemColor.textHighlight);
 		panel.add(separator_1_1);
 		
-		JLabel lblCheckIn = new JLabel("FECHA DE CHECK IN");
+		JLabel lblCheckIn = new JLabel("CHECK IN DATE");
 		lblCheckIn.setForeground(SystemColor.textInactiveText);
 		lblCheckIn.setBounds(68, 136, 220, 14);
 		lblCheckIn.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		panel.add(lblCheckIn);
 		
-		JLabel lblCheckOut = new JLabel("FECHA DE CHECK OUT");
+		JLabel lblCheckOut = new JLabel("CHECK OUT DATE");
 		lblCheckOut.setForeground(SystemColor.textInactiveText);
 		lblCheckOut.setBounds(68, 221, 220, 14);
 		lblCheckOut.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		panel.add(lblCheckOut);
 		
-		JLabel lblFormaPago = new JLabel("FORMA DE PAGO");
+		JLabel lblFormaPago = new JLabel("PAYMENT METHOD");
 		lblFormaPago.setForeground(SystemColor.textInactiveText);
 		lblFormaPago.setBounds(68, 382, 220, 24);
 		lblFormaPago.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		panel.add(lblFormaPago);
 		
-		JLabel lblTitulo = new JLabel("SISTEMA DE RESERVAS");
+		JLabel lblTitulo = new JLabel("RESERVATION");
 		lblTitulo.setBounds(109, 20, 400, 100);
 		lblTitulo.setForeground(new Color(12, 138, 199));
 		lblTitulo.setFont(new Font("Roboto", Font.BOLD, 20));
@@ -153,7 +155,7 @@ public class ReservasView extends JFrame {
 		imagenFondo.setBackground(Color.WHITE);
 		imagenFondo.setIcon(new ImageIcon(ReservasView.class.getResource("/imagenes/reservas-img-3.png")));
 		
-		JLabel lblValor = new JLabel("VALOR DE LA RESERVA");
+		JLabel lblValor = new JLabel("TOTAL COST");
 		lblValor.setForeground(SystemColor.textInactiveText);
 		lblValor.setBounds(72, 303, 220, 14);
 		lblValor.setFont(new Font("Roboto Black", Font.PLAIN, 18));
@@ -199,6 +201,7 @@ public class ReservasView extends JFrame {
 		
 		JPanel header = new JPanel();
 		header.setBounds(0, 0, 910, 36);
+		
 		header.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
@@ -267,6 +270,7 @@ public class ReservasView extends JFrame {
 		txtFechaEntrada.setDateFormatString("yyyy-MM-dd");
 		txtFechaEntrada.setFont(new Font("Roboto", Font.PLAIN, 18));
 		panel.add(txtFechaEntrada);
+				
 
 		txtFechaSalida = new JDateChooser();
 		txtFechaSalida.getCalendarButton().setIcon(new ImageIcon(ReservasView.class.getResource("/imagenes/icon-reservas.png")));
@@ -296,23 +300,28 @@ public class ReservasView extends JFrame {
 		txtFormaPago.setBackground(SystemColor.text);
 		txtFormaPago.setBorder(new LineBorder(new Color(255, 255, 255), 1, true));
 		txtFormaPago.setFont(new Font("Roboto", Font.PLAIN, 16));
-		txtFormaPago.setModel(new DefaultComboBoxModel(new String[] {"Tarjeta de Crédito", "Tarjeta de Débito", "Dinero en efectivo"}));
+		txtFormaPago.setModel(new DefaultComboBoxModel(new String[] {"Credit card", "Debit card", "Cash"}));
 		panel.add(txtFormaPago);
 	
-		
 		JPanel btnsiguiente = new JPanel();
 		btnsiguiente.add(lblSiguiente);
+		
 		btnsiguiente.addMouseListener(new MouseAdapter() {
 			
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (ReservasView.txtFechaEntrada.getDate() != null && ReservasView.txtFechaSalida.getDate() != null) {	
 					
-					if (ReservasView.txtFechaEntrada.getDate().compareTo(ReservasView.txtFechaSalida.getDate()) > 0) {
-						JOptionPane.showMessageDialog(ReservasView.this, "Estás viajando en el tiempo amig@");
+					if (ReservasView.txtFechaEntrada.getDate().compareTo(new Date()) == -1) {
+						JOptionPane.showMessageDialog(ReservasView.this, "You can't select a previous date");
 						return;
-					}			
-				
+					}		
+					System.out.println(ReservasView.txtFechaSalida.getDate().compareTo(ReservasView.txtFechaEntrada.getDate()));
+					if (ReservasView.txtFechaSalida.getDate().compareTo(ReservasView.txtFechaEntrada.getDate()) == -1) {
+						JOptionPane.showMessageDialog(ReservasView.this, "Your check-out date is prior to the check-in date");
+						return;
+					}	
+									
 				DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 				long randomReservationNumber = ThreadLocalRandom.current().nextLong(100000000000000000L);
 				reservationController.generateReservation(dateFormat.format(ReservasView.txtFechaEntrada.getDate()), dateFormat.format(ReservasView.txtFechaSalida.getDate()),  Double.parseDouble(txtValor.getText().replaceAll("[^0-9]", "")), String.valueOf(ReservasView.txtFormaPago.getSelectedItem()), randomReservationNumber);
@@ -327,6 +336,9 @@ public class ReservasView extends JFrame {
 			}	
 			
 		});
+		
+		
+		
 		btnsiguiente.setLayout(null);
 		btnsiguiente.setBackground(SystemColor.textHighlight);
 		btnsiguiente.setBounds(238, 493, 122, 35);
@@ -338,7 +350,6 @@ public class ReservasView extends JFrame {
 			
 			public void propertyChange(PropertyChangeEvent evt) {
 				try {
-					//Activa el evento, después del usuario seleccionar las fechas se debe calcular el valor de la reserva
 					
 					LocalDateTime from = LocalDateTime.ofInstant(ReservasView.txtFechaEntrada.getDate().toInstant(), ZoneId.systemDefault());
 					LocalDateTime to = LocalDateTime.ofInstant(ReservasView.txtFechaSalida.getDate().toInstant(), ZoneId.systemDefault());
@@ -348,7 +359,6 @@ public class ReservasView extends JFrame {
 					long diasdeReserva = Duration.between(from, to).toDays();
 					txtValor.setText("$" + Double.toString((double)diasdeReserva * pricePerDay));
 				} catch (NullPointerException e) {
-					// TODO: handle exception
 					txtValor.setText("$" + "0");
 					
 				}

@@ -35,7 +35,6 @@ public class HostModel {
 		
 	}
 	
-	
 	public HostModel(String nombre, String apellido, Date fecha, String nacionalidad, String telefono, long reserva) {
 		this.name =  nombre;
 		this.lastName =  apellido;
@@ -85,10 +84,12 @@ public class HostModel {
 	
 	
 	public HashMap<String, ArrayList<String>> hostsHashmap(){
-		return new GetHuespedes().getHuespedes(this.name);
-		 
+		return new GetHuespedes().getHuespedes(this.name); 
 	}
-	
+
+	public HashMap<String, ArrayList<String>> hostsHashmap2(String hostName, String hostLastName){
+		return new GetHuespedes().getHuespedes(hostName,hostLastName); 
+	}
 	
 	
 	public boolean editHost() {

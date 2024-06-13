@@ -14,6 +14,9 @@ import java.awt.SystemColor;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
+
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
@@ -113,7 +116,7 @@ public class Login extends JFrame {
 		txtUsuario.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
-				 if (txtUsuario.getText().equals("Ingrese su nombre de usuario")) {
+				 if (txtUsuario.getText().equals("Username")) {
 					 txtUsuario.setText("");
 					 txtUsuario.setForeground(Color.black);
 			        }
@@ -124,7 +127,7 @@ public class Login extends JFrame {
 			}
 		});
 		txtUsuario.setFont(new Font("Roboto", Font.PLAIN, 16));
-		txtUsuario.setText("Ingrese su nombre de usuario");
+		txtUsuario.setText("Username");
 		txtUsuario.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 		txtUsuario.setForeground(SystemColor.activeCaptionBorder);
 		txtUsuario.setBounds(65, 256, 324, 32);
@@ -136,10 +139,10 @@ public class Login extends JFrame {
 		separator.setBounds(65, 292, 324, 2);
 		panel.add(separator);
 		
-		JLabel labelTitulo = new JLabel("INICIAR SESIÓN");
+		JLabel labelTitulo = new JLabel("Sign-in");
 		labelTitulo.setForeground(SystemColor.textHighlight);
 		labelTitulo.setFont(new Font("Roboto Black", Font.PLAIN, 26));
-		labelTitulo.setBounds(65, 149, 202, 26);
+		labelTitulo.setBounds(65, 149, 202, 36);
 		panel.add(labelTitulo);
 		
 		JSeparator separator_1 = new JSeparator();
@@ -149,6 +152,7 @@ public class Login extends JFrame {
 		
 		txtContrasena = new JPasswordField();
 		txtContrasena.setText("********");
+		
 		txtContrasena.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -157,18 +161,44 @@ public class Login extends JFrame {
 					txtContrasena.setForeground(Color.black);
 		        }
 		        if (txtUsuario.getText().isEmpty()) {
-		        	txtUsuario.setText("Ingrese su nombre de usuario");
+		        	txtUsuario.setText("Username");
 		        	txtUsuario.setForeground(Color.gray);
 		        }
 			}
+			
 		});
+		
+		
+		txtContrasena.addFocusListener(new FocusListener() {
+			
+			@Override
+			public void focusLost(FocusEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void focusGained(FocusEvent e) {
+				
+				if (String.valueOf(txtContrasena.getPassword()).equals("********")) {
+					txtContrasena.setText("");
+					txtContrasena.setForeground(Color.black);
+		        }
+		        if (txtUsuario.getText().isEmpty()) {
+		        	txtUsuario.setText("Username");
+		        	txtUsuario.setForeground(Color.gray);
+		        }
+				
+			}
+		});
+		
 		txtContrasena.setForeground(SystemColor.activeCaptionBorder);
 		txtContrasena.setFont(new Font("Roboto", Font.PLAIN, 16));
 		txtContrasena.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 		txtContrasena.setBounds(65, 353, 324, 32);
 		panel.add(txtContrasena);
 		
-		JLabel LabelUsuario = new JLabel("USUARIO");
+		JLabel LabelUsuario = new JLabel("Username");
 		LabelUsuario.setForeground(SystemColor.textInactiveText);
 		LabelUsuario.setFont(new Font("Roboto Black", Font.PLAIN, 20));
 		LabelUsuario.setBounds(65, 219, 107, 26);
@@ -207,7 +237,7 @@ public class Login extends JFrame {
 		btnLogin.setLayout(null);
 		btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		
-		JLabel lblNewLabel = new JLabel("ENTRAR");
+		JLabel lblNewLabel = new JLabel("Go!");
 		lblNewLabel.setBounds(0, 0, 122, 44);
 		btnLogin.add(lblNewLabel);
 		lblNewLabel.setForeground(SystemColor.controlLtHighlight);
@@ -251,7 +281,7 @@ public class Login extends JFrame {
            menu.setVisible(true);
            dispose();	 
         } else {
-            JOptionPane.showMessageDialog(this, "Usuario o Contraseña no válidos");
+            JOptionPane.showMessageDialog(this, "Invalid username or password");
         }
 	
 	
@@ -260,7 +290,7 @@ public class Login extends JFrame {
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
 	        yMouse = evt.getY();
-	    }//GEN-LAST:event_headerMousePressed
+	    }
 
 	    private void headerMouseDragged(java.awt.event.MouseEvent evt) {
 	        int x = evt.getXOnScreen();

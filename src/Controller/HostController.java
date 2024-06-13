@@ -14,6 +14,7 @@ import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
+import Database.GetHuespedes;
 import Database.VerifyUsers;
 import Model.ReservationModel;
 import views.MenuUsuario;
@@ -41,7 +42,10 @@ public class HostController {
 		this.hostModel = new HostModel(host);
 		return this.hostModel.hostsHashmap();
 	}
-	
+
+	public HashMap<String, ArrayList<String>> hostSearch2(String hostName, String hostLastName) {
+		return new GetHuespedes().getHuespedes(hostName,hostLastName);
+	}
 	
 	public boolean hostEditing(String hostId, String name, String lastName, String birthDate, String nacionality, String phone, String idReserv) {
 		this.hostModel = new HostModel(hostId, name, lastName,birthDate, nacionality, phone, idReserv);

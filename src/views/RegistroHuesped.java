@@ -164,34 +164,277 @@ public class RegistroHuesped extends JFrame {
 		txtNacionalidad.setBounds(560, 350, 289, 36);
 		txtNacionalidad.setBackground(SystemColor.text);
 		txtNacionalidad.setFont(new Font("Roboto", Font.PLAIN, 16));
-		txtNacionalidad.setModel(new DefaultComboBoxModel(new String[] {"afgano-afgana", "alemán-", "alemana", "árabe-árabe", "argentino-argentina", "australiano-australiana", "belga-belga", "boliviano-boliviana", "brasileño-brasileña", "camboyano-camboyana", "canadiense-canadiense", "chileno-chilena", "chino-china", "colombiano-colombiana", "coreano-coreana", "costarricense-costarricense", "cubano-cubana", "danés-danesa", "ecuatoriano-ecuatoriana", "egipcio-egipcia", "salvadoreño-salvadoreña", "escocés-escocesa", "español-española", "estadounidense-estadounidense", "estonio-estonia", "etiope-etiope", "filipino-filipina", "finlandés-finlandesa", "francés-francesa", "galés-galesa", "griego-griega", "guatemalteco-guatemalteca", "haitiano-haitiana", "holandés-holandesa", "hondureño-hondureña", "indonés-indonesa", "inglés-inglesa", "iraquí-iraquí", "iraní-iraní", "irlandés-irlandesa", "israelí-israelí", "italiano-italiana", "japonés-japonesa", "jordano-jordana", "laosiano-laosiana", "letón-letona", "letonés-letonesa", "malayo-malaya", "marroquí-marroquí", "mexicano-mexicana", "nicaragüense-nicaragüense", "noruego-noruega", "neozelandés-neozelandesa", "panameño-panameña", "paraguayo-paraguaya", "peruano-peruana", "polaco-polaca", "portugués-portuguesa", "puertorriqueño-puertorriqueño", "dominicano-dominicana", "rumano-rumana", "ruso-rusa", "sueco-sueca", "suizo-suiza", "tailandés-tailandesa", "taiwanes-taiwanesa", "turco-turca", "ucraniano-ucraniana", "uruguayo-uruguaya", "venezolano-venezolana", "vietnamita-vietnamita"}));
+		txtNacionalidad.setModel(new DefaultComboBoxModel(new String[] {
+				 "Afghanistan", 
+				  "Albania",
+				  "Algeria",
+				  "American Samoa",
+				  "Andorra", 
+				  "Angola", 
+				  "Anguilla", 
+				  "Antarctica", 
+				  "Antigua and Barbuda", 
+				  "Argentina",  
+				  "Armenia",
+				  "Aruba", 
+				  "Australia", 
+				  "Austria", 
+				  "Azerbaijan", 
+				  "Bahamas", 
+				  "Bahrain",
+				  "Bangladesh", 
+				  "Barbados", 
+				  "Belarus", 
+				  "Belgium", 
+				  "Belize", 
+				  "Benin", 
+				  "Bermuda", 
+				  "Bhutan", 
+				  "Bolivia",
+				  "Bosnia and Herzegovina",
+				  "Botswana",  
+				  "Bouvet Island", 
+				  "Brazil", 
+				  "British Indian Ocean Territory",  
+				  "Brunei Darussalam",  
+				  "Bulgaria",  
+				  "Burkina Faso", 
+				  "Burundi", 
+				  "Cambodia", 
+				  "Cameroon", 
+				  "Canada", 
+				  "Cape Verde", 
+				  "Cayman Islands", 
+				  "Central African Republic", 
+				  "Chad", 
+				  "Chile", 
+				  "China", 
+				  "Christmas Island",  
+				  "Cocos (Keeling) Islands", 
+				  "Colombia", 
+				  "Comoros", 
+				  "Congo", 
+				  "Congo, The Democratic Republic of the", 
+				  "Cook Islands", 
+				  "Costa Rica", 
+				  "Cote D\"Ivoire", 
+				  "Croatia", 
+				  "Cuba", 
+				  "Cyprus", 
+				  "Czech Republic",
+				  "Denmark", 
+				  "Djibouti", 
+				  "Dominica", 
+				  "Dominican Republic",  
+				   "Ecuador", 
+				   "Egypt", 
+				   "El Salvador", 
+				   "Equatorial Guinea", 
+				   "Eritrea", 
+				   "Estonia", 
+				   "Ethiopia", 
+				   "Falkland Islands (Malvinas)",  
+				   "Faroe Islands", 
+				   "Fiji", 
+				   "Finland", 
+				   "France", 
+				   "French Guiana", 
+				   "French Polynesia", 
+				   "French Southern Territories", 
+				   "Gabon", 
+				   "Gambia", 
+				   "Georgia", 
+				   "Germany", 
+				   "Ghana", 
+				   "Gibraltar",  
+				   "Greece", 
+				   "Greenland", 
+				   "Grenada", 
+				   "Guadeloupe",
+				   "Guam",  
+				   "Guatemala", 
+				   "Guernsey", 
+				   "Guinea", 
+				   "Guinea-Bissau", 
+				   "Guyana", 
+				   "Haiti", 
+				   "Heard Island and Mcdonald Islands", 
+				   "Holy See (Vatican City State)", 
+				   "Honduras", 
+				   "Hong Kong", 
+				   "Hungary", 
+				   "Iceland", 
+				   "India", 
+				   "Indonesia", 
+				   "Iran, Islamic Republic Of", 
+				   "Iraq", 
+				   "Ireland", 
+				   "Israel", 
+				   "Italy", 
+				   "Jamaica", 
+				   "Japan", 
+				   "Jersey", 
+				   "Jordan", 
+				   "Kazakhstan", 
+				   "Kenya", 
+				   "Kiribati", 
+				   "Korea, Democratic Republic of",  
+				   "Korea, Republic of",
+				   "Kuwait", 
+				   "Kyrgyzstan", 
+				   "Lao Democratic Republic", 
+				   "Latvia", 
+				   "Lebanon", 
+				   "Lesotho", 
+				   "Liberia", 
+				   "Libyan Arab Jamahiriya",  
+				   "Liechtenstein", 
+				   "Lithuania", 
+				   "Luxembourg", 
+				   "Macao", 
+				   "Macedonia, The Former Yugoslav Republic of", 
+				   "Madagascar", 
+				   "Malawi", 
+				   "Malaysia", 
+				   "Maldives",
+				   "Mali", 
+				   "Malta",
+				   "Marshall Islands", 
+				   "Martinique",  
+				   "Mauritania", 
+				   "Mauritius", 
+				   "Mayotte", 
+				   "Mexico", 
+				   "Micronesia, Federated States of", 
+				   "Moldova, Republic of", 
+				   "Monaco", 
+				   "Mongolia",
+				   "Montserrat", 
+				   "Morocco", 
+				   "Mozambique", 
+				   "Myanmar", 
+				   "Namibia", 
+				   "Nauru", 
+				   "Nepal", 
+				   "Netherlands", 
+				   "Netherlands Antilles", 
+				   "New Caledonia", 
+				   "New Zealand", 
+				   "Nicaragua", 
+				   "Niger", 
+				   "Nigeria", 
+				   "Niue", 
+				   "Norfolk Island",
+				   "Northern Mariana Islands", 
+				   "Norway", 
+				   "Oman", 
+				   "Pakistan",
+				   "Palau", 
+				   "Palestinian Territory",
+				   "Panama", 
+				   "Papua New Guinea", 
+				   "Paraguay", 
+				   "Peru", 
+				   "Philippines", 
+				   "Pitcairn",
+				   "Poland",
+				   "Portugal",
+				   "Puerto Rico", 
+				   "Qatar",  
+				   "Reunion", 
+				   "Romania", 
+				   "Russian Federation",  
+				   "RWANDA",  
+				   "Saint Helena",  
+				   "Saint Kitts and Nevis", 
+				   "Saint Lucia", 
+				   "Saint Pierre and Miquelon", 
+				   "Saint Vincent and the Grenadines",  
+				   "Samoa",  
+				   "San Marino",  
+				   "Sao Tome and Principe", 
+				   "Saudi Arabia", 
+				   "Senegal", 
+				   "Serbia and Montenegro", 
+				   "Seychelles", 
+				   "Sierra Leone", 
+				   "Singapore",
+				   "Slovakia", 
+				   "Slovenia",  
+				   "Solomon Islands", 
+				   "Somalia", 
+				   "South Africa", 
+				   "South Georgia and the South Sandwich Islands", 
+				   "Spain",  
+				   "Sri Lanka", 
+				   "Sudan", 
+				   "Suriname",  
+				   "Svalbard and Jan Mayen",  
+				   "Swaziland",  
+				   "Sweden",  
+				   "Switzerland", 
+				   "Syrian Arab Republic", 
+				   "Taiwan, Province of China", 
+				   "Tajikistan", 
+				   "Tanzania, United Republic of", 
+				   "Thailand", 
+				   "Timor-Leste", 
+				   "Togo", 
+				   "Tokelau",
+				   "Tonga", 
+				   "Trinidad and Tobago", 
+				   "Tunisia",
+				   "Turkey", 
+				   "Turkmenistan",  
+				   "Turks and Caicos Islands", 
+				   "Tuvalu", 
+				   "Uganda", 
+				   "Ukraine", 
+				   "United Arab Emirates", 
+				   "United Kingdom",
+				   "United States",
+				   "United States Minor Outlying Islands", 
+				   "Uruguay", 
+				   "Uzbekistan", 
+				   "Vanuatu", 
+				   "Venezuela",
+				   "Viet Nam", 
+				   "Virgin Islands British", 
+				   "Virgin Islands, U.S.",
+				   "Wallis and Futuna", 
+				   "Western Sahara",
+				   "Yemen", 
+				   "Zambia", 
+				   "Zimbabwe"
+		}));
+		
 		contentPane.add(txtNacionalidad);
 		
-		JLabel lblNombre = new JLabel("NOMBRE");
+		JLabel lblNombre = new JLabel("NAME");
 		lblNombre.setBounds(562, 119, 253, 14);
 		lblNombre.setForeground(SystemColor.textInactiveText);
 		lblNombre.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		contentPane.add(lblNombre);
 		
-		JLabel lblApellido = new JLabel("APELLIDO");
+		JLabel lblApellido = new JLabel("LAST NAME");
 		lblApellido.setBounds(560, 189, 255, 14);
 		lblApellido.setForeground(SystemColor.textInactiveText);
 		lblApellido.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		contentPane.add(lblApellido);
 		
-		JLabel lblFechaN = new JLabel("FECHA DE NACIMIENTO");
+		JLabel lblFechaN = new JLabel("BIRTH DATE");
 		lblFechaN.setBounds(560, 256, 255, 14);
 		lblFechaN.setForeground(SystemColor.textInactiveText);
 		lblFechaN.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		contentPane.add(lblFechaN);
 		
-		JLabel lblNacionalidad = new JLabel("NACIONALIDAD");
+		JLabel lblNacionalidad = new JLabel("NACIONALITY");
 		lblNacionalidad.setBounds(560, 326, 255, 14);
 		lblNacionalidad.setForeground(SystemColor.textInactiveText);
 		lblNacionalidad.setFont(new Font("Roboto Black", Font.PLAIN, 18));
 		contentPane.add(lblNacionalidad);
 		
-		JLabel lblTelefono = new JLabel("TELÉFONO");
+		JLabel lblTelefono = new JLabel("PHONE NUMBER");
 		lblTelefono.setBounds(562, 406, 253, 14);
 		lblTelefono.setForeground(SystemColor.textInactiveText);
 		lblTelefono.setFont(new Font("Roboto Black", Font.PLAIN, 18));
@@ -205,13 +448,13 @@ public class RegistroHuesped extends JFrame {
 		txtTelefono.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 		contentPane.add(txtTelefono);
 		
-		JLabel lblTitulo = new JLabel("REGISTRO HUÉSPED");
-		lblTitulo.setBounds(606, 55, 234, 42);
+		JLabel lblTitulo = new JLabel("GUEST RESERVATION");
+		lblTitulo.setBounds(606, 55, 400, 42);
 		lblTitulo.setForeground(new Color(12, 138, 199));
 		lblTitulo.setFont(new Font("Roboto Black", Font.PLAIN, 23));
 		contentPane.add(lblTitulo);
 		
-		JLabel lblNumeroReserva = new JLabel("NÚMERO DE RESERVA");
+		JLabel lblNumeroReserva = new JLabel("RESERVATION ID");
 		lblNumeroReserva.setBounds(560, 474, 253, 14);
 		lblNumeroReserva.setForeground(SystemColor.textInactiveText);
 		lblNumeroReserva.setFont(new Font("Roboto Black", Font.PLAIN, 18));
@@ -283,7 +526,7 @@ public class RegistroHuesped extends JFrame {
 					exito.setVisible(true);
 					dispose();
 				} else {
-					Object[] options2 = { "Entendido" };
+					Object[] options2 = { "Understood" };
 					JOptionPane.showOptionDialog(null, "Hubo una inconveniente almacenando los datos, intente de nuevo", "Advertencia",
 					        JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
 					        null, options2, options2[0]);
@@ -299,7 +542,7 @@ public class RegistroHuesped extends JFrame {
 		contentPane.add(btnguardar);
 		btnguardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		
-		JLabel labelGuardar = new JLabel("GUARDAR");
+		JLabel labelGuardar = new JLabel("SAVE");
 		labelGuardar.setHorizontalAlignment(SwingConstants.CENTER);
 		labelGuardar.setForeground(Color.WHITE);
 		labelGuardar.setFont(new Font("Roboto", Font.PLAIN, 18));
@@ -337,17 +580,10 @@ public class RegistroHuesped extends JFrame {
 		labelExit.setForeground(SystemColor.black);
 		labelExit.setFont(new Font("Roboto", Font.PLAIN, 18));
 		
-		JLabel lblMisDatos = new JLabel("Mis datos");
-		lblMisDatos.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMisDatos.setEnabled(false);
-		lblMisDatos.setBackground(UIManager.getColor("FormattedTextField.foreground"));
-		lblMisDatos.setForeground(UIManager.getColor("Tree.selectionBackground"));
-		lblMisDatos.setFont(new Font("Dialog", Font.PLAIN, 18));
-		lblMisDatos.setBounds(560, 560, 122, 33);
-		contentPane.add(lblMisDatos);
 		
 		String reserv = new Long(reservation).toString();
 		txtNreserva.setText(reserv);
+		txtNreserva.setEditable(false);
 	
 		btnexit.addMouseListener(new MouseAdapter() {
 			@Override
@@ -366,13 +602,13 @@ public class RegistroHuesped extends JFrame {
 			}
 		});
 		
-		lblMisDatos.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				System.out.println("hay");
-			}
-		
-		});
+//		lblMisDatos.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseClicked(MouseEvent e) {
+//				System.out.println("hay");
+//			}
+//		
+//		});
 		
 	}
 	

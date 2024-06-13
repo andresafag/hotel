@@ -27,7 +27,6 @@ public class ReservationModel {
 	
 	}
 	
-	
 	public ReservationModel(String checkin,  String checkout, double price, String paymethod, long resNumber) {
 		this.checkInDate = Date.valueOf(checkin);
 		this.checkOutDate = Date.valueOf(checkout);
