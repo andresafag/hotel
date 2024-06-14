@@ -48,12 +48,9 @@ This tool will allow you to keep a complete and detailed control of your reserva
 
 ## Under reservations section we will find all the reservations made including the one we just made and be able to edit or delete them 
 
+https://github.com/andresafag/hotel/assets/99931537/cd172a03-12fe-4027-ae53-2d904e055a02
 
-![Screenshot 6_13_2024 8_28_09 PM](https://github.com/andresafag/hotel/assets/99931537/41a3590f-ec1d-4e8c-b931-9b0b4e63c894)
 
-![Screenshot 6_13_2024 8_28_31 PM](https://github.com/andresafag/hotel/assets/99931537/e490adf4-3d7e-4a71-8ff4-d33da0f4a8d0)
-
-![Screenshot 6_13_2024 8_29_04 PM](https://github.com/andresafag/hotel/assets/99931537/75066fbe-ac89-440a-b36b-99ba8879721a)
 
 ## 🖥️ Technologies used:
 
