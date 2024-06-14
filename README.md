@@ -57,10 +57,10 @@ This tool will allow you to keep a complete and detailed control of your reserva
 
 ## 🖥️ Technologies used:
 
-- Java :coffee:
-- Eclipse :first_quarter_moon:
+- Java :coffee: 17
+- Eclipse :first_quarter_moon: 2023-06
 - JCalendar library :calendar:
-- MySql :dolphin:
+- MySql :dolphin: 8.0
 
 </br>
 </br>
