@@ -15,21 +15,7 @@ This tool will allow you to keep a complete and detailed control of your reserva
 
 
 
-##  Here it shows the tables using MySql relational database:
 
-> This is the stand-alone employees table
-<picture>
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/be9cf797-dd7e-4bfe-92c2-f04ca6214271"> 
-</picture>
-</br>
-</br>
-
-> This is the relationship between the table reservation and host
-<picture>
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/andresafag/hotel/assets/99931537/cd8b97d0-bb1f-4192-804e-4083a6eed721"> 
-</picture>
-</br>
-</br>
 
 
 ![Screenshot 6_13_2024 8_22_10 PM](https://github.com/andresafag/hotel/assets/99931537/cabb66ee-d600-4192-a7cd-4bd031201b48)
